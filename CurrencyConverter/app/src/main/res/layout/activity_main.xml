@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/poundsImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="113dp"
+        android:contentDescription="poundsImage"
+        app:layout_constraintBottom_toTopOf="@+id/poundsAmount"
+        app:layout_constraintEnd_toStartOf="@+id/euroImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pounds" />
+
+    <ImageView
+        android:id="@+id/euroImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="113dp"
+        android:contentDescription="euroImage"
+        app:layout_constraintBottom_toTopOf="@+id/eurosAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poundsImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/euro" />
+
+    <EditText
+        android:id="@+id/poundsAmount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter £'s"
+        app:layout_constraintBottom_toTopOf="@+id/convertButton"
+        app:layout_constraintEnd_toStartOf="@+id/eurosAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poundsImage" />
+
+    <EditText
+        android:id="@+id/eurosAmount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="248dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter €'s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poundsAmount"
+        app:layout_constraintTop_toBottomOf="@+id/euroImage" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="145dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginStart="102dp"
+        android:onClick="buttonClicked"
+        android:text="Convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/poundsAmount"
+        app:layout_constraintTop_toBottomOf="@+id/poundsAmount" />
+</android.support.constraint.ConstraintLayout>
